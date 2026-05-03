@@ -1,0 +1,50 @@
+name: iponko
+description: IponKo - Student Savings App for Filipino students
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Local storage (offline-first)
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # State management
+  flutter_riverpod: ^2.4.9
+  riverpod_annotation: ^2.3.3
+
+  # Navigation
+  go_router: ^13.2.0
+
+  # UI
+  google_fonts: ^6.1.0
+  fl_chart: ^0.67.0           # For savings charts
+  lottie: ^3.1.0              # For celebration animations
+  percent_indicator: ^4.2.3   # Goal progress bars
+
+  # Utilities
+  intl: ^0.19.0               # Date/currency formatting
+  uuid: ^4.3.3                # Generate local IDs
+  shared_preferences: ^2.2.2  # PIN & settings storage
+  image_picker: ^1.0.7        # Deposit receipt photos
+  local_auth: ^2.1.8          # Biometric / PIN lock
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.8
+  riverpod_generator: ^2.3.9
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  # assets:         ← Uncomment and add folders ONLY after you create them
+  #   - assets/images/
+  #   - assets/animations/
+  #   - assets/icons/

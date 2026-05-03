@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "IponKo (Android)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": [
+        "--target-platform", "android-arm64"
+      ],
+      "flutterMode": "debug"
+    },
+    {
+      "name": "IponKo (Android Release)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": [
+        "--target-platform", "android-arm64",
+        "--release"
+      ],
+      "flutterMode": "release"
+    },
+    {
+      "name": "IponKo (Profile — Performance Test)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "profile"
+    }
+  ]
+}
