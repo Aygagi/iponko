@@ -95,11 +95,7 @@ class PinScreen extends StatelessWidget {
 
 // ─── Student Screens ─────────────────────────────────────────────────────────
 
-class GoalsScreen extends StatelessWidget {
-  const GoalsScreen({super.key});
-  @override
-  Widget build(BuildContext context) => _StubScreen(title: 'Goals', emoji: '🎯');
-}
+// GoalsScreen moved to lib/screens/student/goals_screen.dart
 
 // CreateGoalScreen moved to lib/screens/student/create_goal_screen.dart
 
