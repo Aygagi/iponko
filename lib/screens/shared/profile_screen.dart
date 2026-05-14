@@ -146,9 +146,16 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                     showArrow: false,
                   ),
                   _SettingsTile(
+                    icon: Icons.code_rounded,
+                    label: 'Developed by',
+                    sublabel: 'Joshua & Jhed',
+                    onTap: () {},
+                    showArrow: false,
+                  ),
+                  _SettingsTile(
                     icon: Icons.school_outlined,
                     label: 'BSIT — AI & Robotics',
-                    sublabel: 'Frontend by Joshua • Backend by Jhed',
+                    sublabel: 'Integ 2 Final Project',
                     onTap: () {},
                     showArrow: false,
                   ),
