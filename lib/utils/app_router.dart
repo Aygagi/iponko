@@ -2,9 +2,11 @@
 
 import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../providers/app_providers.dart';
 import '../screens/stub_screens.dart';
 import '../screens/student/student_dashboard.dart';
 import '../screens/student/add_deposit_screen.dart';
+import '../screens/student/create_goal_screen.dart';
 
 class AppRoutes {
   static const splash = '/';
