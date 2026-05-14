@@ -103,11 +103,7 @@ class OnboardingScreen extends StatelessWidget {
 
 // CreateGoalScreen moved to lib/screens/student/create_goal_screen.dart
 
-class DepositLogScreen extends StatelessWidget {
-  const DepositLogScreen({super.key});
-  @override
-  Widget build(BuildContext context) => _StubScreen(title: 'Deposit Log', emoji: '📋');
-}
+// DepositLogScreen moved to lib/screens/student/deposit_log_screen.dart
 
 // AddDepositScreen moved to lib/screens/student/add_deposit_screen.dart
 
