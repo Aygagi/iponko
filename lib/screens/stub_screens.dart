@@ -30,13 +30,35 @@ class SplashScreen extends ConsumerWidget {
             const Text('Mag-ipon tayo!',
                 style: TextStyle(color: Colors.white70, fontSize: 16)),
             const SizedBox(height: 48),
+
+            // New user → Sign Up
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.philippineYellow,
                   foregroundColor: AppColors.philippineBlue,
                   minimumSize: const Size(220, 52)),
+              onPressed: () => context.go(AppRoutes.signup),
+              child: const Text('Mag-Sign Up',
+                  style: TextStyle(fontWeight: FontWeight.w700)),
+            ),
+            const SizedBox(height: 12),
+
+            // Returning user → PIN
+            OutlinedButton(
+              style: OutlinedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  side: const BorderSide(color: Colors.white),
+                  minimumSize: const Size(220, 52)),
+              onPressed: () => context.go(AppRoutes.pin, extra: false),
+              child: const Text('Mag-Login',
+                  style: TextStyle(fontWeight: FontWeight.w600)),
+            ),
+
+            const SizedBox(height: 24),
+
+            // Demo shortcut — remove before final submission
+            TextButton(
               onPressed: () async {
-                // Seed a demo student user for testing
                 final repo = ref.read(repositoryProvider);
                 var user = await repo.getCurrentUser();
                 if (user == null) {
@@ -45,7 +67,7 @@ class SplashScreen extends ConsumerWidget {
                     name: 'Joshua',
                     email: 'joshua@iponko.ph',
                     role: 'student',
-                    school: 'Your School',
+                    school: 'BSIT School',
                     gradeLevel: 3,
                     createdAt: DateTime.now(),
                     isSynced: false,
@@ -54,17 +76,10 @@ class SplashScreen extends ConsumerWidget {
                 }
                 if (context.mounted) context.go('/student');
               },
-              child: const Text('Student Demo',
-                  style: TextStyle(fontWeight: FontWeight.w700)),
-            ),
-            const SizedBox(height: 12),
-            OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                  foregroundColor: Colors.white,
-                  side: const BorderSide(color: Colors.white),
-                  minimumSize: const Size(220, 52)),
-              onPressed: () => context.go('/parent'),
-              child: const Text('Parent Demo'),
+              child: const Text('🧪 Demo Mode',
+                  style: TextStyle(
+                      color: Colors.white38,
+                      fontSize: 12)),
             ),
           ],
         ),
@@ -79,19 +94,8 @@ class OnboardingScreen extends StatelessWidget {
   Widget build(BuildContext context) => _StubScreen(title: 'Onboarding', emoji: '📖');
 }
 
-class SignupScreen extends StatelessWidget {
-  const SignupScreen({super.key});
-  @override
-  Widget build(BuildContext context) => _StubScreen(title: 'Sign Up', emoji: '✍️');
-}
-
-class PinScreen extends StatelessWidget {
-  final bool isSetup;
-  const PinScreen({super.key, required this.isSetup});
-  @override
-  Widget build(BuildContext context) => _StubScreen(
-      title: isSetup ? 'Set PIN' : 'Enter PIN', emoji: '🔐');
-}
+// SignupScreen moved to lib/screens/auth/signup_screen.dart
+// PinScreen moved to lib/screens/auth/pin_screen.dart
 
 // ─── Student Screens ─────────────────────────────────────────────────────────
 
