@@ -11,6 +11,7 @@ import '../screens/student/add_deposit_screen.dart';
 import '../screens/student/create_goal_screen.dart';
 import '../screens/student/goals_screen.dart';
 import '../screens/student/deposit_log_screen.dart';
+import '../screens/student/badges_screen.dart';
 
 class AppRoutes {
   static const splash = '/';

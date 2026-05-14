@@ -107,11 +107,7 @@ class OnboardingScreen extends StatelessWidget {
 
 // AddDepositScreen moved to lib/screens/student/add_deposit_screen.dart
 
-class BadgesScreen extends StatelessWidget {
-  const BadgesScreen({super.key});
-  @override
-  Widget build(BuildContext context) => _StubScreen(title: 'Badges', emoji: '🏆');
-}
+// BadgesScreen moved to lib/screens/student/badges_screen.dart
 
 // ─── Parent Screens ──────────────────────────────────────────────────────────
 
